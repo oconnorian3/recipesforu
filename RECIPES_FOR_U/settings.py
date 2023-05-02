@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ["recipesforu.herokuapp.com", "localhost"]
 
 
 # Application definition
+ACCOUNT_EMAIL_VERIFICATION = 'none' 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -46,6 +47,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sites',
     'cloudinary_storage',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django.contrib.staticfiles',
     'django_summernote',
     'cloudinary',
@@ -54,6 +58,9 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
