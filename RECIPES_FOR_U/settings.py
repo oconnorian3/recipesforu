@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_summernote',
     'cloudinary',
+    'bootstrap4',
     'blog',
 ]
 
