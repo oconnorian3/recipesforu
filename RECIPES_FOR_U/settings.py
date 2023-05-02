@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ["recipesforu.herokuapp.com", "localhost"]
 
 # Application definition
 ACCOUNT_EMAIL_VERIFICATION = 'none' 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
