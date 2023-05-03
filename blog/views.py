@@ -59,6 +59,6 @@ def edit_post(request, slug):
             post.save()
             return redirect('post_detail', slug=post.slug)
     else:
-        form = EditPostForm()
+        form = EditPostForm(initial={'title': post.title, 'content': post.content, 'author': post.author, 'status': post.status})
 
     return render(request, 'edit_post.html', {'form': form, 'post': post})
