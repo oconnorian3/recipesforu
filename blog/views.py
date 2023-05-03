@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import PostForm
 
 
@@ -36,15 +36,13 @@ class PostDetail(View):
             },
         )    
 
-@login_required
 def create_post(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.save()
-            return redirect('post_detail', slug=post.slug)
+            form.save()
+            return redirect('home')
     else:
         form = PostForm()
-    return render(request, 'create_post.html',)
+    return render(request, 'create.html', {'form': form})
+

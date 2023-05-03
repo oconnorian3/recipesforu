@@ -1,5 +1,5 @@
 body {
-    background-color: #F9FAFC;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .brand {
@@ -28,7 +28,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #FFFFFF;
 }
 
 .card {
@@ -142,3 +142,7 @@ body {
     background: transparent;
     border: none;
 }
+
+.nav-link {
+    font-size: 2em;
+  }
