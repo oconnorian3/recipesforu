@@ -1,3 +1,4 @@
+from . import views
 from .views import create_post
 from django.urls import path
 

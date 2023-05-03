@@ -44,8 +44,7 @@ def create_post(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            return redirect('post_detail', pk=post.pk)
+            return redirect('post_detail', slug=post.slug)
     else:
         form = PostForm()
     return render(request, 'create_post.html', {'form': form})
-     
