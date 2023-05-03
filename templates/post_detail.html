@@ -1,5 +1,6 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
 
+{% block content %}
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -9,18 +10,21 @@
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683108652/pexels-rajesh-tp-1633525_grrm3b.jpg" width="100%">
+            <div class="post-detail">
+                {% if post.image and user.is_authenticated %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                {% elif post.image %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                    <img src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683108652/pexels-rajesh-tp-1633525_grrm3b.jpg" width="100%">
                 {% endif %}
+                <h1>{{ post.title }}</h1>
+                <p class="text-muted">By {{ post.author }} | {{ post.created_on }}</p>
+                <p>{{ post.content | safe }}</p>
             </div>
             <div class="card-text">
                 {{ post.content | safe }}
-              </div>
-              
+            </div>
         </div>
     </div>
 </div>
@@ -35,7 +39,6 @@
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
-
                     <div class="col-1">
                         <!-- The number of likes goes before the closing strong tag -->
                         <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
@@ -47,12 +50,10 @@
                             {{ total_comments }}</strong>
                         {% endwith %}
                         {% if user.is_authenticated %}
-                    <div class="text-right mt-3">
-                        <a class="nav-link" href="{% url 'edit_post' slug=post.slug %}">Edit</a>
-
-                    </div>
+                            <div class="text-right mt-3">
+                                <a class="nav-link" href="{% url 'edit_post' slug=post.slug %}">Edit</a>
+                            </div>
                         {% endif %}
-            
                     </div>
                 </div>
             </div>
@@ -69,28 +70,12 @@
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <!-- The body of the comment goes before the | -->
-                    {{ comment.body | linebreaks }}
+                <div class="comments" style="">
+                    <strong>{{ comment.name }}</strong>
+                    <p>{{ comment.body }}</p>
                 </div>
-                <!-- Our for loop ends here -->
+                {% empty %}
+                <p>No comments yet!</p>
                 {% endfor %}
-            </div>
-        </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">
-                <!-- For later -->
-            </div>
-        </div>
-    </div>
-</div>
-
+               
 {% endblock content %}
