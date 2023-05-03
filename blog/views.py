@@ -4,6 +4,7 @@ from .models import Post
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import PostForm
+from .forms import EditPostForm
 
 
 class PostList(generic.ListView):
@@ -46,4 +47,15 @@ def create_post(request):
         form = PostForm()
     return render(request, 'create.html', {'form': form})
 
+def edit_post(request, post_id, slug):
+    post = get_object_or_404(Post, id=post_id, slug=slug)
 
+    if request.method == 'POST':
+        form = EditPostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('post_detail', post_id=post.id, slug=slug)
+    else:
+        form = EditPostForm(instance=post)
+
+    return render(request, 'edit_post.html', {'form': form})
