@@ -54,7 +54,7 @@ def edit_post(request, slug):
         form = EditPostForm(request.POST, instance=post)
         if form.is_valid():
             form.save()
-            return redirect('edit_post', slug=slug)
+            return redirect('post-detail', slug=slug)
     else:
         form = EditPostForm(instance=post)
 
