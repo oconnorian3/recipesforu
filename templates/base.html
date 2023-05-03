@@ -61,6 +61,12 @@
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
+
+        {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create_post' %}">Create Post</a>
+                    </li>
+        {% endif %}
     </main>
 
     <!-- Footer -->
