@@ -4,4 +4,6 @@ from .models import Post
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'author', 'content', 'status', 'featured_image')
+        fields = ('title', 'slug', 'content', 'author', 'status', 'image',)
+
+    image = forms.ImageField(required=False)

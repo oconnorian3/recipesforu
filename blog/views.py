@@ -46,3 +46,4 @@ def create_post(request):
         form = PostForm()
     return render(request, 'create.html', {'form': form})
 
+
