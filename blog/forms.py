@@ -1,20 +1,30 @@
 from django import forms
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 from .models import Post
 
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title', 'slug', 'content', 'author', 'status', 'image',)
-
+        widgets = {
+        'title': forms.TextInput(attrs={'class': 'form-control'}),
+        'content': SummernoteWidget(attrs={'summernote': {'width': '100%', 'height': '500px'}}),
+        'author': forms.Select(attrs={'class': 'form-control'}),
+        'status': forms.Select(attrs={'class': 'form-control'}),
+        'image': forms.FileInput(attrs={'class': 'form-control-file'})
+    }
     image = forms.ImageField(required=False)
 
 class EditPostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'content', 'author', 'status', 'image',]
-
-    title = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    content = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control'}))
-    featured_image = forms.ImageField(required=False, widget=forms.ClearableFileInput(attrs={'class': 'form-control'}))
+        widgets = {
+        'title': forms.TextInput(attrs={'class': 'form-control'}),
+        'content': SummernoteWidget(attrs={'summernote': {'width': '100%', 'height': '500px'}}),
+        'author': forms.Select(attrs={'class': 'form-control'}),
+        'status': forms.Select(attrs={'class': 'form-control'}),
+        'image': forms.FileInput(attrs={'class': 'form-control-file'})
+    }
 
     image = forms.ImageField(required=False)

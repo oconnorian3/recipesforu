@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'bootstrap4',
     'blog',
+    'Pillow',
 ]
 
 SITE_ID = 1
