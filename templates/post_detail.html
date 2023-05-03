@@ -48,7 +48,7 @@
                         {% endwith %}
                         {% if user.is_authenticated %}
                     <div class="text-right mt-3">
-                        <a class="nav-link" href="{% url 'edit_post' post_id=post.id slug=post.slug %}">Edit</a>
+                        <a class="nav-link" href="{% url 'edit_post' slug=post.slug %}">Edit</a>
 
                     </div>
                         {% endif %}

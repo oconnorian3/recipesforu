@@ -47,7 +47,7 @@ def create_post(request):
         form = PostForm()
     return render(request, 'create.html', {'form': form})
 
-def edit_post(request, post_id, slug):
+def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
     if request.method == 'POST':
