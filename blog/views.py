@@ -47,15 +47,18 @@ def create_post(request):
         form = PostForm()
     return render(request, 'create.html', {'form': form})
 
+@login_required
 def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
     if request.method == 'POST':
         form = EditPostForm(request.POST, instance=post)
         if form.is_valid():
-            form.save()
-            return redirect('post-detail', slug=slug)
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('post_detail', slug=post.slug)
     else:
-        form = EditPostForm(instance=post)
+        form = EditPostForm()
 
-    return render(request, 'edit_post.html', {'form': form})
+    return render(request, 'edit_post.html', {'form': form, 'post': post})
