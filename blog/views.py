@@ -48,13 +48,13 @@ def create_post(request):
     return render(request, 'create.html', {'form': form})
 
 def edit_post(request, post_id, slug):
-    post = get_object_or_404(Post, id=post_id, slug=slug)
+    post = get_object_or_404(Post, slug=slug)
 
     if request.method == 'POST':
         form = EditPostForm(request.POST, instance=post)
         if form.is_valid():
             form.save()
-            return redirect('edit_post', post_id=post.id, slug=slug)
+            return redirect('edit_post', slug=slug)
     else:
         form = EditPostForm(instance=post)
 
