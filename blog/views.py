@@ -7,7 +7,7 @@ from .forms import PostForm
 from .forms import EditPostForm
 from django.views.decorators.http import require_POST
 from .forms import ContactForm
-from .models import Contact
+from .models import ContactForm
 
 
 class PostList(generic.ListView):
