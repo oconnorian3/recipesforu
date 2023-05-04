@@ -7,7 +7,6 @@ from .forms import PostForm
 from .forms import EditPostForm
 from django.views.decorators.http import require_POST
 from .forms import ContactForm
-from .models import ContactForm
 
 
 class PostList(generic.ListView):
@@ -16,6 +15,7 @@ class PostList(generic.ListView):
     template_name = "index.html"
     paginate_by = 6
 
+# post detail view
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -35,7 +35,7 @@ class PostDetail(View):
                 "liked": liked
             },
         )    
-
+# create post view
 def create_post(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
@@ -46,6 +46,7 @@ def create_post(request):
         form = PostForm()
     return render(request, 'create.html', {'form': form})
 
+#edit post view
 @login_required
 def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
@@ -62,6 +63,7 @@ def edit_post(request, slug):
 
     return render(request, 'edit_post.html', {'form': form, 'post': post})
 
+# delete post view
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
@@ -74,18 +76,14 @@ def delete_post(request, slug):
 
 ## Contact form view
 
-@require_POST
-def contact(request):
-    form = ContactForm(request.POST)
-    if form.is_valid():
-        name = form.cleaned_data['name']
-        email = form.cleaned_data['email']
-        message = form.cleaned_data['message']
-        contact = Contact(name=name, email=email, message=message)
-        contact.save()
-        return redirect('contact_success')
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'contact_success.html')
     else:
-        return render(request, 'contact.html', {'form': form})
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
 
-def contact_success(request):
-    return render(request, 'contact_success.html')
+  
