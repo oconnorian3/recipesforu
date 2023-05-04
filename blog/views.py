@@ -13,10 +13,6 @@ class PostList(generic.ListView):
     template_name = "index.html"
     paginate_by = 6
 
-
-#def homepage(request):
-    #return render(request, 'homepage.html')
-
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -62,3 +58,10 @@ def edit_post(request, slug):
         form = EditPostForm(initial={'title': post.title, 'content': post.content, 'author': post.author, 'status': post.status ,'image': post.image})
 
     return render(request, 'edit_post.html', {'form': form, 'post': post})
+
+def delete_post(request, id):
+    recipe = get_object_or_404(Recipe, id=id)
+    if request.method == 'POST':
+        recipe.delete()
+        return redirect('home')
+    return render(request, 'delete_recipe.html', {'recipe': recipe})
