@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 
 <div class="masthead">
     <div class="container">
@@ -19,10 +20,9 @@
                 <h1>{{ post.title }}</h1>
                 <p class="text-muted">By {{ post.author }} | {{ post.created_on }}</p>
                 <p>{{ post.content | safe }}</p>
-              </div>
+            </div>
             <div class="card-text">
                 {{ post.content | safe }}
-              </div>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
@@ -38,28 +38,33 @@
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
-
-                    <div class="col-1">
+                    <div class="col-2">
                         <!-- The number of likes goes before the closing strong tag -->
                         <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
                     </div>
-                    <div class="col-1">
+                    <div class="col-2">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
                         {% endwith %}
-                        {% if user.is_authenticated %}
-                    <div class="text-right mt-3">
-                        <a class="nav-link" href="{% url 'edit_post' slug=post.slug %}">Edit</a>
-
                     </div>
-                        {% endif %}
-                        {% if user.is_authenticated %}
-                    <div class="text-right mt-3">
-                        <a class="nav-link" href="{% url 'delete_post' slug=post.slug %}">Delete Post</a>
-                        {% endif %}
+                </div>
+                <div class="row mt-3">
+                    {% if user.is_authenticated %}
+                    <div class="col">
+                        <div class="d-flex justify-content-start">
+                            <a class="btn btn-secondary" href="{% url 'edit_post' slug=post.slug %}">Edit Post</a>
+                            <a class="btn btn-danger" href="{% url 'delete_post' slug=post.slug %}">Delete Post</a>
+                        </div>
+                        <!--Space buttons-->
+                        <style>
+                            .d-flex.justify-content-start > a:not(:last-child) {
+                                margin-right: 10px;
+                            }
+                        </style>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -70,33 +75,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-8 card mb-4 mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-                {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <!-- The body of the comment goes before the | -->
-                    {{ comment.body | linebreaks }}
-                </div>
-                <!-- Our for loop ends here -->
-                {% endfor %}
-            </div>
-        </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">
-                <!-- For later -->
-            </div>
-        </div>
-    </div>
-</div>
+
+
 
 {% endblock content %}
