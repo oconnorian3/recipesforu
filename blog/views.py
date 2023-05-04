@@ -59,9 +59,12 @@ def edit_post(request, slug):
 
     return render(request, 'edit_post.html', {'form': form, 'post': post})
 
-def delete_post(request, id):
-    recipe = get_object_or_404(Recipe, id=id)
+def delete_post(request, slug):
+    post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
-        recipe.delete()
+        post.delete()
         return redirect('home')
-    return render(request, 'delete_recipe.html', {'recipe': recipe})
+    context = {
+        'post': post,
+    }
+    return render(request, 'delete_post.html', context)
