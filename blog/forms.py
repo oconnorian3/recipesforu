@@ -1,6 +1,8 @@
 from django import forms
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 from .models import Post
+from .models import ContactForm
+
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -34,4 +36,25 @@ class EditPostForm(forms.ModelForm):
         widgets = {
             'content': SummernoteWidget(),
         }
-    
+
+## Contact Form
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = ContactForm
+        fields = ['name', 'email', 'subject', 'message']
+        labels = {
+            'name': 'Your Name',
+            'email': 'Your Email',
+            'subject': 'Subject',
+            'message': 'Message'
+        }
+        widgets = {
+            'message': forms.Textarea(attrs={'rows': 5})
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['name'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Your Name'})
+        self.fields['email'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Your Email'})
+        self.fields['subject'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Subject'})
+        self.fields['message'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Message'})

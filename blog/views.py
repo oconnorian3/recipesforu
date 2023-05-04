@@ -5,6 +5,9 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import PostForm
 from .forms import EditPostForm
+from django.views.decorators.http import require_POST
+from .forms import ContactForm
+from .models import Contact
 
 
 class PostList(generic.ListView):
@@ -68,3 +71,21 @@ def delete_post(request, slug):
         'post': post,
     }
     return render(request, 'delete_post.html', context)
+
+## Contact form view
+
+@require_POST
+def contact(request):
+    form = ContactForm(request.POST)
+    if form.is_valid():
+        name = form.cleaned_data['name']
+        email = form.cleaned_data['email']
+        message = form.cleaned_data['message']
+        contact = Contact(name=name, email=email, message=message)
+        contact.save()
+        return redirect('contact_success')
+    else:
+        return render(request, 'contact.html', {'form': form})
+
+def contact_success(request):
+    return render(request, 'contact_success.html')
