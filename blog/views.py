@@ -48,14 +48,15 @@ def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
     if request.method == 'POST':
-        form = EditPostForm(request.POST, instance=post)
+        form = EditPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user
+            #post.author = request.user
             post.save()
             return redirect('post_detail', slug=post.slug)
     else:
-        form = EditPostForm(initial={'title': post.title, 'content': post.content, 'author': post.author, 'status': post.status ,'image': post.image})
+        form = EditPostForm(instance=post)
+
 
     return render(request, 'edit_post.html', {'form': form, 'post': post})
 
