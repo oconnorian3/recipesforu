@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import Post
 from django.contrib.auth.decorators import login_required
@@ -8,6 +8,7 @@ from .forms import EditPostForm
 from django.views.decorators.http import require_POST
 from .forms import ContactForm
 from .forms import CommentForm
+from django.http import HttpResponseRedirect
 
 class PostList(generic.ListView):
     model = Post
@@ -119,4 +120,16 @@ def contact_view(request):
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
 
-  
+## Likes View
+
+
+class PostLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
