@@ -7,7 +7,7 @@ from .forms import PostForm
 from .forms import EditPostForm
 from django.views.decorators.http import require_POST
 from .forms import ContactForm
-
+from .forms import CommentForm
 
 class PostList(generic.ListView):
     model = Post
@@ -32,7 +32,8 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "liked": liked
+                "liked": liked,
+                "comment_form": CommentForm()
             },
         )    
 # create post view

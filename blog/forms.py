@@ -3,6 +3,9 @@ from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 from .models import Post
 from django import forms
 from .models import Contact
+from .models import Comment
+
+
 
 
 class PostForm(forms.ModelForm):
@@ -43,3 +46,9 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = ['name', 'email', 'subject', 'message']
+
+## Comments
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('body',)
