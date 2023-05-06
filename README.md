@@ -29,7 +29,39 @@ Below are some basic Wireframes done up before the project started.
 
 ![](static/images/wireframe_loggedout.png)
 
-*When a user is NOT logged in*
+*When a user IS logged in*
 
 ![](static/images/wireframe_loggedin.png)
+
+## Development Planes ##
+
+In order to develop an engaging and all-encompassing website, I conducted research on other food-related websites. This enabled me to identify and incorporate appropriate features and functionalities that aligned with my project, as well as determine a suitable color palette for the project.
+
+**Site Goals**
+
+The primary objective for the website was to establish a platform that users could effortlessly navigate and engage with, not only to upload their own recipes but also to interact with other members. My vision was to build a community where individuals could freely submit their favorite recipes and explore new ones.
+
+The website caters to the following target groups:
+
+* User Roles:
+    * Standard User
+    * Administrator
+
+* Demographics:
+    * Individuals passionate about food
+    * Those seeking to broaden their culinary horizons
+    * Cooking enthusiasts     
+
+* The website must provide the user with the ability to:
+    * Browse through recipes
+    * Register and establish their account
+    * Create and upload their own recipes
+    * Like and comment on recipes
+    * Fill out a contact form
+
+* The website must provide the admin with the ability to:
+    * Approve comments    
+    * Filter through recipes, comments, and users to manage the site effectively    
+
+
 
