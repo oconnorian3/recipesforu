@@ -37,6 +37,8 @@ Below are some basic Wireframes done up before the project started.
 
 In order to develop an engaging and all-encompassing website, I conducted research on other food-related websites. This enabled me to identify and incorporate appropriate features and functionalities that aligned with my project, as well as determine a suitable color palette for the project.
 
+## Strategy ##
+
 **Site Goals**
 
 The primary objective for the website was to establish a platform that users could effortlessly navigate and engage with, not only to upload their own recipes but also to interact with other members. My vision was to build a community where individuals could freely submit their favorite recipes and explore new ones.
@@ -63,5 +65,6 @@ The website caters to the following target groups:
     * Approve comments    
     * Filter through recipes, comments, and users to manage the site effectively    
 
+## Scope ##
 
-
+This section outlines the functions and features included in the project scope. The project was designed with minimal functionality in mind, which means that most of the features included are basic requirements. For instance, user sign up and login functionality had to be implemented, along with basic CRUD operations for authenticated users. For a detailed explanation of all the existing features, please refer to the Existing Features **Add Link** section. The Future Features section discusses potential features that were deemed unnecessary at this point in time, despite being within the project's possible scope.
