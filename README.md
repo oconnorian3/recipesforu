@@ -17,4 +17,19 @@ The site features are standard and expected for a blog site.
 
 **Agile**
 
+The agile approach was employed in designing and constructing this project, from the outset of planning to the completion of development. To facilitate the process, I established a GitHub project and adopted the Kanban board methodology to divide project components into user stories and feasible tasks.
+
+For a comprehensive view of all user stories please refer to the linked project [Project Kanban Board](https://github.com/users/oconnorian3/projects/10) . Additionally, each story has been assigned a label that indicates its level of significance in the site's overall functionality and acceptance.
+
+**Wireframe**
+
+Below are some basic Wireframes done up before the project started.
+
+*When a user is NOT logged in*
+
+![](static/images/wireframe_loggedout.png)
+
+*When a user is NOT logged in*
+
+![](static/images/wireframe_loggedin.png)
 
