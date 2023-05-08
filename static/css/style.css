@@ -129,6 +129,7 @@ body {
 .nav-link {
     color: rgb(34, 34, 43);
     font-size: 2em;
+    font-family: 'Frank Ruhl Libre', serif;
   }
 
 .nav-link:hover,
@@ -137,4 +138,11 @@ body {
   color: #d62b70;;
 }
 
-  
+.card-title {
+    font-family: 'Frank Ruhl Libre', serif;
+}  
+
+.navbar-text {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.5em;
+}
