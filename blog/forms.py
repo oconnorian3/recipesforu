@@ -16,15 +16,15 @@ class PostForm(forms.ModelForm):
             'content': SummernoteWidget(),
         }
         labels = {
-            'title': '',
-            'slug': '',
-            'content': '',
-            'author': '',
-            'status': '',
-            'image': '',
+            'title': 'Post Title',
+            'slug': 'Slug',
+            'content': 'Body',
+            'author': 'Author',
+            'status': 'Status',
+            'featured_image': 'Image',
         }
         help_texts = {
-            'image': 'Please upload an image for your post',
+            'featured_image': 'Please upload an image for your post',
         }
 
     def __init__(self, *args, **kwargs):
