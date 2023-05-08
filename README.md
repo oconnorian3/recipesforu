@@ -321,3 +321,6 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
 ```
 
+## Sources Credits ##
+
+**Add Content**
