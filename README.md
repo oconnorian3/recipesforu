@@ -173,3 +173,31 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * Has a title , slug , and a body field. All fields must be filled out for the post to create. The body field allows users to format and style their text and also allows them to add images which will display in the body of the post only
  * User must select the author field and whether they just want a draft of the blog or actually publish it
  * User can submit an image aswell which will display as the main image for the post. If no image is selected a default place holder will be used
+
+**Add Imagery**
+
+**Edit Recpie (For Authenticated Users Only)**
+
+ * Pre-populates all post content
+ * User can update any field and change image
+ * All fields are required and submission will not succeed unless form is completed
+
+**Add Imagery**
+
+**Delete Recipes (For Authenticated Users Only)**
+
+ * Renders seperate page that prompts user to confirm action to delete recipe
+
+**Add Imagery**
+
+## Oppurtunities For Future Features ##
+
+**Add Content**
+
+## Database Models ##
+
+I used Lucid to design the Database models. 
+
+![](static/images/database_models.png)
+
+The Post & Content models are based on the Django tutorial walkthrough project by Code Institute. The project required one custom model (the contact model) . This model was desinged for the contact form. 

@@ -49,7 +49,7 @@ class Comment(models.Model):
 ## Custom Contact Form Model 
 
 class Contact(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=200)
     email = models.EmailField()
     subject = models.CharField(max_length=100)
     message = models.TextField()
