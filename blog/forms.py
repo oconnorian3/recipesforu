@@ -7,7 +7,7 @@ from .models import Comment
 
 
 
-
+## Post Foem
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
@@ -33,6 +33,7 @@ class PostForm(forms.ModelForm):
             field.widget.attrs.update({'class': 'form-control'})
         self.fields['content'].widget.attrs.update({'class': 'form-control'})
 
+## Edit Post Form
 class EditPostForm(forms.ModelForm):
     class Meta:
         model = Post
