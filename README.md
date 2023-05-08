@@ -68,3 +68,11 @@ The website caters to the following target groups:
 ## Scope ##
 
 This section outlines the functions and features included in the project scope. The project was designed with minimal functionality in mind, which means that most of the features included are basic requirements. For instance, user sign up and login functionality had to be implemented, along with basic CRUD operations for authenticated users. For a detailed explanation of all the existing features, please refer to the Existing Features **Add Link** section. The Future Features section discusses potential features that were deemed unnecessary at this point in time, despite being within the project's possible scope.
+
+## Structure ##
+
+ The site's layout is based on a simple blog design that is commonly used by many other blogs online. With this structure, users can easily access the site, browse receipes , leave a message and login/register so they can upload their own recipes and comment on other recipes.
+
+ ## Skeleton ##
+
+ Wireframes were made using Lucid. Plsease click [here](#Wireframe) to view Wireframes. 
