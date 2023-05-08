@@ -83,8 +83,41 @@ This section outlines the functions and features included in the project scope. 
 
 **Colour Scheme**
 
-A white background (#FFF) for all pages and posts was chosen throughout the site. A whitebackground allows the images to standout which is the intention here . 
+A white background (#FFF) for all pages and posts was chosen throughout the site. A white background allows the images to standout which is the intention here. 
 
 The colour (#d62b70) was used for most (not all) other areas of the site as this colour is the main colour used in the logo and using this colour throughout helps tie the design of the site in together. 
 
 ![](static/images/colour_displayed_in_readme.png)
+
+**Fonts**
+
+Fill in later
+
+**Images and Logos/Icons**
+
+The custom logo was used using the Logo Generator Looka. The post imagery will be determined by whatever image the post creator decides to publish. A default image will be put in place should the user not upload an image. The social icons and comment/like icons are taken from Font Awesome.
+
+## Features ##
+
+**Navigation**
+
+    * Navigation bar with logo and links
+    * Different links visible for authenticated and unauthenticated users
+    * Links change from **add colour** to **add colour** when you hover over them
+    * Responsive menu which collapes into a burger on small to medium screens
+    * Brief description on the far right, explaining what the site is about
+
+**Add Imagery**
+
+**Landing Page**
+
+    * The landing page itself will immediately display the most recent ** posts.
+    * The landing pagge will display both the headers and footer with easibly identifiable links to helo the user navigate throughout the site
+    * Pagnation has been implekllented on the site so the user can scrool to the next set of posts using the "next" link
+    * When a user is logged in the home page will display different links as seen in the images below
+
+**Add Imagery**
+
+**Post View**
+
+    * 
