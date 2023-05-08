@@ -101,23 +101,75 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 
 **Navigation**
 
-    * Navigation bar with logo and links
-    * Different links visible for authenticated and unauthenticated users
-    * Links change from **add colour** to **add colour** when you hover over them
-    * Responsive menu which collapes into a burger on small to medium screens
-    * Brief description on the far right, explaining what the site is about
+ * Navigation bar with logo and links
+ * Different links visible for authenticated and unauthenticated users
+ * Links change from **add colour** to **add colour** when you hover over them
+ * Responsive menu which collapes into a burger on small to medium screens
+ * Brief description on the far right, explaining what the site is about
 
 **Add Imagery**
 
 **Landing Page**
 
-    * The landing page itself will immediately display the most recent ** posts.
-    * The landing pagge will display both the headers and footer with easibly identifiable links to helo the user navigate throughout the site
-    * Pagnation has been implekllented on the site so the user can scrool to the next set of posts using the "next" link
-    * When a user is logged in the home page will display different links as seen in the images below
+ * The landing page itself will immediately display the most recent ** posts.
+ * The landing pagge will display both the headers and footer with easibly identifiable links to helo the user navigate throughout the site
+ * Pagnation has been implekllented on the site so the user can scrool to the next set of posts using the "next" link
+ * When a user is logged in the home page will display different links as seen in the images below
 
 **Add Imagery**
 
-**Post View**
+**Post View For Non Logged In Users**
 
-    * 
+ * Recipe title and image viewble at the top of the post view page
+ * Author's name and publish date viewable under title and image
+ * Recipe content  
+ * Number of likes and comments ( Non logged in users cannot contribute to this)
+ * User can view approvded comments
+
+**Add Imagery**
+
+**Post View For Logged In Users**
+
+ * Recipe title and image viewble at the top of the post view page
+ * Author's name and publish date viewable under title and image
+ * Recipe content
+ * Number of likes and comments, user can click on the heart to add a like
+ * Option to edit/remove a post if the user created that post. When clicking delete the user is prompted with the message *Are you sure you want to delete the following recipe?* which helps prevent users mistakinly deleteing posts.
+ * Option to submit a comment and view other comments. Test must be added or else the comment will not submit.
+
+**Add Imagery**
+
+**Contact US**
+
+ * This is a simple form which allows user contact the site admins directly. The form will not submit unless all fields are filled out. THer email field requires a valid email.
+
+**Add Imagery**
+
+**Register/Sign UP**
+
+ * Allows user to create account
+ * Fields include Username, Email (optional), Password and Password confirmation
+ * Has an embeeded link which takes the user back to the login page should they need to
+
+**Add Imagery**
+
+**Login**
+
+ * Login form asking for username and password of signed up user
+ * Includes "Remember me" checkbox option
+ * Has an embeeded link which takes the user back to the register page should they need to
+
+**Add Imagery**
+
+**Logout (For Authenticated Users Only)**
+
+ * Seperate page prompts user to confirm action to sign out
+
+**Add Imagery**
+
+**Create Post (For Authenticated Users Only)**
+
+ * Allows a user to create a post
+ * Has a title , slug , and a body field. All fields must be filled out for the post to create. The body field allows users to format and style their text and also allows them to add images which will display in the body of the post only
+ * User must select the author field and whether they just want a draft of the blog or actually publish it
+ * User can submit an image aswell which will display as the main image for the post. If no image is selected a default place holder will be used
