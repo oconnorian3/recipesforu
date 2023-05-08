@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'bootstrap4',
     'crispy_forms',
+    'crispy_bootstrap4',
     'blog',
     'django_extensions',
 ]
