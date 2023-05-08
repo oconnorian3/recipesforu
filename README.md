@@ -76,3 +76,15 @@ This section outlines the functions and features included in the project scope. 
  ## Skeleton ##
 
  Wireframes were made using Lucid. Plsease click [here](#Wireframe) to view Wireframes. 
+
+ ## Surface ##
+
+ This pertains to the visual design aspect and how to effectively convey the desired emotions and effects. For a more comprehensive understanding of planning for the surface plane please see below.
+
+**Colour Scheme**
+
+A white background (#FFF) for all pages and posts was chosen throughout the site. A whitebackground allows the images to standout which is the intention here . 
+
+The colour (#d62b70) was used for most (not all) other areas of the site as this colour is the main colour used in the logo and using this colour throughout helps tie the design of the site in together. 
+
+![](static/images/colour_displayed_in_readme.png)
