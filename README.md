@@ -247,4 +247,53 @@ The project's design process was centered around the CRUD principle, which stand
 
  **Add content later**
 
- 
+ ## Deployment ##
+
+ This project was deployed using Heroku, Cloudinary, ElephantSQL
+
+ The following steps describe the required libraries to ensure successful deployment on Heroku.
+
+ * Install Gunicorn (server used to run Django on Heroku): pip3 install django gunicorn
+ * Install pyscopg2 (connects to PostgreSQL): pip 3 install dj_database_url pyscopg2
+ * Install Cloudinary (host static files and images): pip3 install dj3-cloudinary-storage
+
+**Creating the Heroku App**
+
+ * Log into Heroku and go to the Dashboard
+ * Click New and select Create new app from the drop-down
+ * Name app appropriately and choose relevant region, then click Create App
+
+**Create PostgreSQL database using ElephantSQL**
+
+Creating a database accessible by Heroku is essential, as the database provided by Django cannot be accessed by a deployed Heroku app.
+
+
+ * Log into ElephantSQL and go to Dashboard
+ * Click Create New Instance
+ * Set up a plan by providing a Name (project name) and select a Plan (for this project the free plan "Tiny Turtle" was chosen). Tags are optional.
+ * Click Select Region and choose appropriate Data center
+ * Click Review, check all details and click Create Instance
+ * Return to Dashboard on click on the name of the newly created instance
+ * Copy the database URL from the details section
+
+**Update Settings**
+
+ * Add the following code at the top of `settings.py` to connect Django project to env.py:
+
+ ```
+   import os
+  import dj_database_url
+  if os.path.isfile('env.py'):
+      import env
+ ```
+ * Remove insecure secret key provide by Django in settings.py and refer to variable in env.py instead `(SECRET_KEY = os.environ.get('SECRET_KEY'))`
+ * To connect to new database, replace provided DATABASE variable with
+
+```
+ DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+```
+* Save and migrate all changes made
+
+
