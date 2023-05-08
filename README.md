@@ -239,7 +239,7 @@ The project's design process was centered around the CRUD principle, which stand
  * Summernote (Summernote is a free and open-source WYSIWYG (What You See Is What You Get) text editor for web pages. It provides an easy-to-use interface for editing and formatting text, allowing users to create and publish rich content without having to write HTML code manually)
  * django-bootstrap4 (A third-party package for Django web framework that provides integration with the popular front-end framework Bootstrap 4. It allows developers to easily use Bootstrap's styling and components in their Django templates, without having to write the HTML and CSS code manually)
 
-**Databaase**
+**Database**
 
  * ElephantSQL (PostgreSQL database hosting)
 
@@ -296,4 +296,28 @@ Creating a database accessible by Heroku is essential, as the database provided 
 ```
 * Save and migrate all changes made
 
+**Connecting Heroku to Database**
+
+* In Heroku dashboard, go to Settings tab
+* Add three new config vars `DATABASE_URL (value is database URL)`, `SECRET_KEY (value is secret key string)` and `PORT (value "8000")`
+
+**Connect to Cloudinary**
+
+* In Cloudinary dashboard, copy API Environment variable
+* In env.py file, add new variable `os.environ["CLOUDINARY_URL"] = "<copied_variable"` and remove `CLOUDINARY_URL=` from the variable string
+* Add same variable value as new Heroku config var named `CLOUDINARY_URL`
+* In settings.py, in `INSTALLED_APPS `list, above `django.contrib.staticfiles` add `cloudinary_storage`, below add cloudinary
+* To define Cloudinary as static file storage add the following to settings.py
+
+```
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+```
+**Allow Heroku as host**
+
+ * In settings.py add
+
+```
+ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+```
 
