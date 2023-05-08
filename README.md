@@ -201,3 +201,50 @@ I used Lucid to design the Database models.
 ![](static/images/database_models.png)
 
 The Post & Content models are based on the Django tutorial walkthrough project by Code Institute. The project required one custom model (the contact model) . This model was desinged for the contact form. 
+
+## CRUD ##
+
+The project's design process was centered around the CRUD principle, which stands for Create, Read, Update, and Delete.
+
+ * Create: An authenticated user can create and save a haiku entry.
+ * Read: A user can browse and read their own and other users' haiku entries.
+ * Update: An authenticated user can edit and update their own saved entries.
+ * Delete: An authenticated user can delete their own saved entries.
+
+## Technologies Used ##
+
+**Main Languages Used**
+
+ * HTML5
+ * CSS3
+
+**Hosting and Work**
+
+ * Lucid (Wireframe and DB model Diagrams)
+ * GitHub (Version Control)
+ * GitPod (IDE)
+ * Heroku (Hosting site)
+ * Cloudinary (Some static Files)
+
+**Python Libraries**
+
+ * PyJWT (Python library that provides a way to encode and decode JSON Web Tokens (JWTs). JWT is a compact, URL-safe means of representing claims to be transferred between two parties. It can be used for authentication and authorization purposes in web applications )
+ * Gunicorn (Python HTTP server for WSGI applications)
+ * pyscopg2 (PostgreSQL Database adapter)
+
+ **Django Libraries**
+
+ * django-allauth (User authentication)
+ * django-crispy-forms (Control rendering behaviour of Django forms)
+ * Summernote (Summernote is a free and open-source WYSIWYG (What You See Is What You Get) text editor for web pages. It provides an easy-to-use interface for editing and formatting text, allowing users to create and publish rich content without having to write HTML code manually)
+ * django-bootstrap4 (A third-party package for Django web framework that provides integration with the popular front-end framework Bootstrap 4. It allows developers to easily use Bootstrap's styling and components in their Django templates, without having to write the HTML and CSS code manually)
+
+**Databaase**
+
+ * ElephantSQL (PostgreSQL database hosting)
+
+ ## Testing ##
+
+ **Add content later**
+
+ 
