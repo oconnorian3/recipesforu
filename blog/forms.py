@@ -56,6 +56,13 @@ class ContactForm(forms.ModelForm):
         model = Contact
         fields = ['name', 'email', 'subject', 'message']
 
+        labels = {
+            'Name': 'Name',
+            'Email': 'Email',
+            'Subject': 'Subject',
+            'Message': 'Message',
+        }    
+
 ## Comments
 class CommentForm(forms.ModelForm):
     class Meta:
