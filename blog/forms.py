@@ -41,6 +41,15 @@ class EditPostForm(forms.ModelForm):
             'content': SummernoteWidget(),
         }
 
+        labels = {
+            'title': 'Post Title',
+            'slug': 'Slug',
+            'content': 'Body',
+            'author': 'Author',
+            'status': 'Status',
+            'featured_image': 'Image',
+        }
+
 ## Contact Form
 class ContactForm(forms.ModelForm):
     class Meta:
