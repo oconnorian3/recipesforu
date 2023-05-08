@@ -21,7 +21,7 @@ The agile approach was employed in designing and constructing this project, from
 
 For a comprehensive view of all user stories please refer to the linked project [Project Kanban Board](https://github.com/users/oconnorian3/projects/10) . Additionally, each story has been assigned a label that indicates its level of significance in the site's overall functionality and acceptance.
 
-**##Wireframe**
+## Wireframe
 
 Below are some basic Wireframes done up before the project started.
 
