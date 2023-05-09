@@ -13,18 +13,18 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+#import cloudinary
+#import cloudinary.uploader
+#import cloudinary.api
 
 
 if os.path.isfile("env.py"):
     import env
 
-cloudinary.config(
-    cloud_name = 'dwhdvlzr7',
-    api_key = '594278766791973',
-    api_secret = 'Xge7mOYfp5w2lxjCy1cRqExnyGw'
+#cloudinary.config(
+    #cloud_name = 'dwhdvlzr7',
+    #api_key = '594278766791973',
+    #api_secret = 'Xge7mOYfp5w2lxjCy1cRqExnyGw'
 )
 
 result = cloudinary.uploader.upload('static/css/style.css', resource_type='raw')
