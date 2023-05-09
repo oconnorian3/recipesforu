@@ -21,10 +21,10 @@ import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
-#cloudinary.config(
-    #cloud_name = 'dwhdvlzr7',
-    #api_key = '594278766791973',
-    #api_secret = 'Xge7mOYfp5w2lxjCy1cRqExnyGw'
+cloudinary.config(
+    cloud_name = 'dwhdvlzr7',
+    api_key = '594278766791973',
+    api_secret = 'Xge7mOYfp5w2lxjCy1cRqExnyGw'
 )
 
 result = cloudinary.uploader.upload('static/css/style.css', resource_type='raw')
