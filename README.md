@@ -318,7 +318,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
  * In settings.py add
 
 ```
-ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost'
+ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
 ```
 
 ## Sources Credits ##
