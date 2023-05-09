@@ -27,7 +27,7 @@ cloudinary.config(
     api_secret = 'Xge7mOYfp5w2lxjCy1cRqExnyGw'
 )
 
-
+result = cloudinary.uploader.upload('static/css/style.css', resource_type='raw')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
