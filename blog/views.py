@@ -74,12 +74,14 @@ class PostDetail(View):
 # create post view
 def create_post(request):
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
+        form = PostForm(request.POST, request.FILES, user=request.user)
         if form.is_valid():
-            form.save()
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
             return redirect('home')
     else:
-        form = PostForm()
+        form = PostForm(initial={'author': request.user})
     return render(request, 'create.html', {'form': form})
 
 #edit post view
@@ -104,6 +106,8 @@ def edit_post(request, slug):
 # delete post view
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
+    if request.user != post.author:
+        raise PermissionDenied  # raise an exception if the user is not the author
     if request.method == 'POST':
         post.delete()
         return redirect('home')

@@ -6,11 +6,14 @@ from django.urls import path
 from .views import contact_view
 from django.core.exceptions import PermissionDenied
 
+
 def permission_denied_view(request, exception=None):
     return TemplateView.as_view(template_name='403.html')(request)
 
+
 # Add custom handlers for exceptions
 handler403 = permission_denied_view    
+
 
 urlpatterns = [
     path("", views.PostList.as_view(), name="home"),

@@ -6,12 +6,12 @@ from .models import Contact
 from .models import Comment
 
 
+# Post Foem
 
-## Post Foem
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'content', 'author', 'status', 'featured_image',)
+        fields = ('title', 'slug', 'content', 'status', 'author', 'featured_image',)
         widgets = {
             'content': SummernoteWidget(),
         }
@@ -19,8 +19,8 @@ class PostForm(forms.ModelForm):
             'title': 'Post Title',
             'slug': 'Slug',
             'content': 'Body',
-            'author': 'Author',
             'status': 'Status',
+            'author': 'Author',
             'featured_image': 'Image',
         }
         help_texts = {
@@ -28,12 +28,26 @@ class PostForm(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
             field.widget.attrs.update({'class': 'form-control'})
-        self.fields['content'].widget.attrs.update({'class': 'form-control'})
+        if user:
+            self.initial['author'] = user.pk
+            self.fields['author'].widget = forms.HiddenInput()
 
-## Edit Post Form
+    def save(self, commit=True):
+        post = super().save(commit=False)
+        if 'author' in self.initial:
+            post.author_id = self.initial['author']
+        if commit:
+            post.save()
+        return post
+
+
+# Edit Post Form
+
+
 class EditPostForm(forms.ModelForm):
     class Meta:
         model = Post
@@ -51,7 +65,9 @@ class EditPostForm(forms.ModelForm):
             'featured_image': 'Image',
         }
 
-## Contact Form
+# Contact Form
+
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
@@ -64,7 +80,9 @@ class ContactForm(forms.ModelForm):
             'Message': 'Message',
         }    
 
-## Comments
+# Comments
+
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
