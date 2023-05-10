@@ -6,7 +6,7 @@ from .models import Contact
 from .models import Comment
 
 
-# Post Foem
+# Post Form
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -24,7 +24,7 @@ class PostForm(forms.ModelForm):
             'featured_image': 'Image',
         }
         help_texts = {
-            'featured_image': 'Please upload an image for your post',
+            'featured_image': 'Please upload an image for your post. For optimal results, please ensure that the image is 300px x 300px. Posts with images that do not render as expected may be removed.',
         }
 
     def __init__(self, *args, **kwargs):
@@ -64,6 +64,9 @@ class EditPostForm(forms.ModelForm):
             'status': 'Status',
             'featured_image': 'Image',
         }
+        help_texts = {
+            'featured_image': 'Please upload an image for your post. For optimal results, please ensure that the image is 300px x 300px. Posts with images that do not render as expected may be removed.',
+        }
 
 # Contact Form
 
@@ -80,7 +83,7 @@ class ContactForm(forms.ModelForm):
             'Message': 'Message',
         }    
 
-# Comments
+# Comments Form
 
 
 class CommentForm(forms.ModelForm):

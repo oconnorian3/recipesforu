@@ -1,19 +1,24 @@
+/* Set the body background color to white */
 body {
     background-color: hsl(0, 0%, 100%);
 }
 
+/* Set the font weight to 300 */
 .thin {
     font-weight: 300;
 }
 
+/* Set the footer color */
 .dark-bg {
     background-color: #d62b70;
 }
 
+/* Set a white background color */
 .main-bg {
     background-color: #ffffff;
 }
 
+/* Posts Styling */
 .card {
     border: none;
     background-color: transparent;
@@ -42,7 +47,7 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 35vh;
     width: 100%;
 }
 
@@ -55,21 +60,18 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
+.masthead-image img {
+    width: 100%;
     height: 100%;
-    width: 150%;
-    background: #d62b70;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
+    object-fit: contaim;
+  }
+
 
 .post-link {
     text-decoration: none;
@@ -90,6 +92,8 @@ body {
     margin-left: 5%;
     color: #d62b70;
 }
+
+/* Buttons and links */
 
 .btn-signup {
     background-color: #d62b70;
@@ -132,11 +136,14 @@ body {
     font-family: 'Frank Ruhl Libre', serif;
   }
 
+
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
   color: #d62b70 !important;
 }
+
+/* Fonts */
 
 .card-title {
     font-family: 'Frank Ruhl Libre', serif;
@@ -147,12 +154,16 @@ body {
     font-size: 1.5em;
 }
 
+/* Main Logo */
+
 #my-logo  {
     width: 470px ;
     height: 150px ;
     object-fit: cover;
   }
 
+ /* Images */
+  
 img {
     width: 300px;
     height: 300px;

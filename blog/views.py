@@ -19,6 +19,8 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 # post detail view
+
+
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -72,6 +74,8 @@ class PostDetail(View):
             },
         )        
 # create post view
+
+
 def create_post(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, user=request.user)
@@ -84,7 +88,7 @@ def create_post(request):
         form = PostForm(initial={'author': request.user})
     return render(request, 'create.html', {'form': form})
 
-#edit post view
+# edit post view
 @login_required
 def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
@@ -104,6 +108,8 @@ def edit_post(request, slug):
         raise PermissionDenied
 
 # delete post view
+
+
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
     if request.user != post.author:
@@ -116,7 +122,8 @@ def delete_post(request, slug):
     }
     return render(request, 'delete_post.html', context)
 
-## Contact form view
+# Contact form view
+
 
 def contact_view(request):
     if request.method == 'POST':
@@ -128,7 +135,7 @@ def contact_view(request):
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
 
-## Likes View
+# Likes View
 
 
 class PostLike(View):
