@@ -9,6 +9,8 @@ from django.views.decorators.http import require_POST
 from .forms import ContactForm
 from .forms import CommentForm
 from django.http import HttpResponseRedirect
+from django.core.exceptions import PermissionDenied
+
 
 class PostList(generic.ListView):
     model = Post
@@ -85,17 +87,19 @@ def create_post(request):
 def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
-    if request.method == 'POST':
-        form = EditPostForm(request.POST, request.FILES, instance=post)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            return redirect('post_detail', slug=post.slug)
+    if request.user == post.author:
+        if request.method == 'POST':
+            form = EditPostForm(request.POST, request.FILES, instance=post)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.save()
+                return redirect('post_detail', slug=post.slug)
+        else:
+            form = EditPostForm(instance=post)
+        context = {'form': form, 'post': post}
+        return render(request, 'edit_post.html', context)
     else:
-        form = EditPostForm(instance=post)
-
-
-    return render(request, 'edit_post.html', {'form': form, 'post': post})
+        raise PermissionDenied
 
 # delete post view
 def delete_post(request, slug):
