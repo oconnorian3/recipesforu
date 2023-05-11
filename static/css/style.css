@@ -157,9 +157,10 @@ body {
 /* Main Logo */
 
 #my-logo  {
-    width: 470px ;
-    height: 150px ;
+    width: 20em ;
+    height: 7em ;
     object-fit: cover;
+    position: relative;
   }
 
  /* Images */
@@ -170,6 +171,7 @@ img {
     object-fit: cover;
   }
 
-  .navbar-brand img:hover {
-    transform: rotate(10deg);
-  }
+ 
+
+ 
+  
