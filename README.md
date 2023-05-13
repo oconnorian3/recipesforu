@@ -3,9 +3,9 @@
 
 This Django project is a reccipe sharing blog intended for food lovers where users can upload, comment and like other recipes. Users can also view recipes posted by other users which they can try. Like a regular blog only registered users can post, comment on or like other recipies . Registered users will also have the ability to edit or remove their previous posts. 
 
-## Post responsive images here
+![](images/responsive-screenshot.png)
 
-Link to site.
+[Link to site](https://recipesforu.herokuapp.com)
 
 ## UI/UX ##
 
@@ -91,7 +91,7 @@ The colour (#d62b70) was used for most (not all) other areas of the site as this
 
 **Fonts**
 
-Fill in later
+The Google Font *Frank Ruhl Libre* was used for most of the headings and Seri as a backup font.
 
 **Images and Logos/Icons**
 
@@ -107,18 +107,16 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * Responsive menu which collapes into a burger on small to medium screens
  * Brief description on the far right, explaining what the site is about
 
-**Add Imagery**
+![](/images/navigation.png)
 
 **Landing Page**
 
- * The landing page itself will immediately display the most recent ** posts.
+ * The landing page itself will immediately display the most recent 6 posts.
  * The landing pagge will display both the headers and footer with easibly identifiable links to helo the user navigate throughout the site
  * Pagnation has been implekllented on the site so the user can scrool to the next set of posts using the "next" link
  * When a user is logged in the home page will display different links as seen in the images below
 
-**Add Imagery**
-
-**Post View For Non Logged In Users**
+**Create Post View For Non Logged In Users**
 
  * Recipe title and image viewble at the top of the post view page
  * Author's name and publish date viewable under title and image
@@ -126,7 +124,7 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * Number of likes and comments ( Non logged in users cannot contribute to this)
  * User can view approvded comments
 
-**Add Imagery**
+![](/images/create_post.png)
 
 **Post View For Logged In Users**
 
@@ -137,13 +135,13 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * Option to edit/remove a post if the user created that post. When clicking delete the user is prompted with the message *Are you sure you want to delete the following recipe?* which helps prevent users mistakinly deleteing posts.
  * Option to submit a comment and view other comments. Test must be added or else the comment will not submit.
 
-**Add Imagery**
+![](/images/post-view.png)
 
 **Contact US**
 
  * This is a simple form which allows user contact the site admins directly. The form will not submit unless all fields are filled out. THer email field requires a valid email.
 
-**Add Imagery**
+![](/images/contact-us.png)
 
 **Register/Sign UP**
 
@@ -151,7 +149,7 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * Fields include Username, Email (optional), Password and Password confirmation
  * Has an embeeded link which takes the user back to the login page should they need to
 
-**Add Imagery**
+![](/images/sign-up.png)
 
 **Login**
 
@@ -159,13 +157,13 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * Includes "Remember me" checkbox option
  * Has an embeeded link which takes the user back to the register page should they need to
 
-**Add Imagery**
+![](/images/sign-in.png)
 
 **Logout (For Authenticated Users Only)**
 
  * Seperate page prompts user to confirm action to sign out
 
-**Add Imagery**
+![](/images/sign-out.png)
 
 **Create Post (For Authenticated Users Only)**
 
@@ -174,7 +172,7 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * User must select the author field and whether they just want a draft of the blog or actually publish it
  * User can submit an image aswell which will display as the main image for the post. If no image is selected a default place holder will be used
 
-**Add Imagery**
+![](/images/create-post-view.png)
 
 **Edit Recpie (For Authenticated Users Only)**
 
@@ -182,19 +180,31 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * User can update any field and change image
  * All fields are required and submission will not succeed unless form is completed
 
-**Add Imagery**
+![](/images/edit-post.png)
 
 **Delete Recipes (For Authenticated Users Only)**
 
  * Renders seperate page that prompts user to confirm action to delete recipe
+ * Refuses access to delete if recipe was bnot posted by the user
 
-**Add Imagery**
+![](/images/delete-post.png)
+
+![](/images/custom-403.png)
 
 ## Oppurtunities For Future Features ##
 
-**Add Content**
+Features I would have like to add but could not due to various contraints
+
+ * Allow users create profiles so they can add extra features such as create drafts
+ * Add catergories and a search bar
+ * Links which allows users easily share various posts on thier social media
+
 
 ## Database Models ##
+
+## Database Flowchart ##
+
+![](/images/erd.png)
 
 I used Lucid to design the Database models. 
 
@@ -217,6 +227,7 @@ The project's design process was centered around the CRUD principle, which stand
 
  * HTML5
  * CSS3
+ * Python
 
 **Hosting and Work**
 
@@ -224,7 +235,7 @@ The project's design process was centered around the CRUD principle, which stand
  * GitHub (Version Control)
  * GitPod (IDE)
  * Heroku (Hosting site)
- * Cloudinary (Some static Files)
+ * Cloudinary (Static Files)
 
 **Python Libraries**
 
@@ -238,6 +249,7 @@ The project's design process was centered around the CRUD principle, which stand
  * django-crispy-forms (Control rendering behaviour of Django forms)
  * Summernote (Summernote is a free and open-source WYSIWYG (What You See Is What You Get) text editor for web pages. It provides an easy-to-use interface for editing and formatting text, allowing users to create and publish rich content without having to write HTML code manually)
  * django-bootstrap4 (A third-party package for Django web framework that provides integration with the popular front-end framework Bootstrap 4. It allows developers to easily use Bootstrap's styling and components in their Django templates, without having to write the HTML and CSS code manually)
+ * whitenoise ( Helps with static files on Heroku)
 
 **Database**
 
@@ -408,4 +420,6 @@ ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
 
 ## Sources Credits ##
 
-**Add Content**
+ * Used AI Logo Geneartor Looka to create Logo
+ * The masthead and author banner code was taken from the walk through Django project 
+ * Code for the custom 403 page was taken from W3Schools
