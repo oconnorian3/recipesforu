@@ -17,7 +17,7 @@
                                 <img class="card-img-top"
                                     src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683108652/pexels-rajesh-tp-1633525_grrm3b.jpg" alt="placeholder Image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
