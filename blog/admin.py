@@ -5,6 +5,7 @@ from .models import Contact
 
 admin.site.register(Contact)
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 

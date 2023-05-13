@@ -12,7 +12,7 @@ def permission_denied_view(request, exception=None):
 
 
 # Add custom handlers for exceptions
-handler403 = permission_denied_view    
+handler403 = permission_denied_view
 
 
 urlpatterns = [

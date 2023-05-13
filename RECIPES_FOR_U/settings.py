@@ -37,7 +37,7 @@ ALLOWED_HOSTS = ["recipesforu.herokuapp.com", "localhost"]
 
 
 # Application definition
-ACCOUNT_EMAIL_VERIFICATION = 'none' 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -114,7 +114,6 @@ WSGI_APPLICATION = 'RECIPES_FOR_U.wsgi.application'
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
 
 
 # Password validation

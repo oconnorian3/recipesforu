@@ -306,15 +306,31 @@ The project's design process was centered around the CRUD principle, which stand
 
 ![](/images/lighthouse.png)
 
-** Validators **
+**Validators**
 
-[HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2F)
+[HTML Linl](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2F)
 
 ![](/images/html-validator.png)
 
-[CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+[CSS Link](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 ![](/images/css-validator.png)
+
+Python files were tested using [this validator](https://pep8ci.herokuapp.com/)
+
+    Blog - admin.py - All clear
+    Blog - apps.py - All Clear
+    Blog - forms.py - All clear
+    Blog - models.py - All clear
+    Recipes4u - urls.py - All clear
+    Blog - views.py - All Clear
+    Recipes - settings.py - All clear except for 4 lines which are too long and I could not shorten
+    Blog - urls.py - All clear
+
+**Browser Testing**
+
+Site renders correctly on Chrome, Firefox and Safari
+
 
  ## Deployment ##
 

@@ -41,7 +41,7 @@ class PostDetail(View):
                 "commented": False,
                 "comment_form": CommentForm()
             },
-        )    
+        )
 
     def post(self, request, slug, *args, **kwargs):
 
@@ -71,7 +71,7 @@ class PostDetail(View):
                 "comment_form": comment_form,
                 "liked": liked
             },
-        )        
+        )
 # create post view
 
 
@@ -88,6 +88,8 @@ def create_post(request):
     return render(request, 'create.html', {'form': form})
 
 # edit post view
+
+
 @login_required
 def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
@@ -112,7 +114,7 @@ def edit_post(request, slug):
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
     if request.user != post.author:
-        raise PermissionDenied  # raise an exception if the user is not the author
+        raise PermissionDenied  # raise exception if the user is not the author
     if request.method == 'POST':
         post.delete()
         return redirect('home')
@@ -138,7 +140,7 @@ def contact_view(request):
 
 
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -147,3 +149,4 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        

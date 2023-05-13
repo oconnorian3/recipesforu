@@ -11,7 +11,8 @@ from .models import Comment
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'content', 'status', 'author', 'featured_image',)
+        fields = (
+            'title', 'slug', 'content', 'status', 'author', 'featured_image',)
         widgets = {
             'content': SummernoteWidget(),
         }
@@ -24,7 +25,11 @@ class PostForm(forms.ModelForm):
             'featured_image': 'Image',
         }
         help_texts = {
-            'featured_image': 'Please upload an image for your post. For optimal results, please ensure that the image is 300px x 300px. Posts with images that do not render as expected may be removed.',
+            'featured_image': "Please upload an image for your post."
+            " For optimal results,"
+            " please ensure that the image is 300px x 300px."
+            " Posts with images that do not"
+            " render as expected may be removed.",
         }
 
     def __init__(self, *args, **kwargs):
@@ -51,7 +56,7 @@ class PostForm(forms.ModelForm):
 class EditPostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'content', 'author', 'status', 'featured_image',]
+        fields = ['title', 'content', 'author', 'status', 'featured_image', ]
         widgets = {
             'content': SummernoteWidget(),
         }
@@ -65,7 +70,11 @@ class EditPostForm(forms.ModelForm):
             'featured_image': 'Image',
         }
         help_texts = {
-            'featured_image': 'Please upload an image for your post. For optimal results, please ensure that the image is 300px x 300px. Posts with images that do not render as expected may be removed.',
+            'featured_image': "Please upload an image for your post."
+            " For optimal results,"
+            " please ensure that the image is 300px x 300px."
+            " Posts with images that do not"
+            " render as expected may be removed.",
         }
 
 # Contact Form
@@ -81,7 +90,7 @@ class ContactForm(forms.ModelForm):
             'Email': 'Email',
             'Subject': 'Subject',
             'Message': 'Message',
-        }    
+        }
 
 # Comments Form
 
