@@ -306,6 +306,15 @@ The project's design process was centered around the CRUD principle, which stand
 
 ![](/images/lighthouse.png)
 
+** Validators **
+
+[HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2F)
+
+![](/images/html-validator.png)
+
+[CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![](/images/css-validator.png)
 
  ## Deployment ##
 
