@@ -189,6 +189,7 @@ img {
     }
 }
   
+/* Mashead is smaller on smaller screens */
 @media (max-width: 768px) {
     .masthead {
       height: 10em;
