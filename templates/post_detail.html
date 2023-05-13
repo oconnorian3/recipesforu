@@ -17,12 +17,6 @@
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" alt="Image of Posted Recipe" width="100%">
                 {% endif %}
-                <h1>{{ post.title }}</h1>
-                <p class="text-muted">By {{ post.author }} | {{ post.created_on }}</p>
-                <p>{{ post.content | safe }}</p>
-            </div>
-            <div class="card-text">
-                {{ post.content | safe }}
             </div>
         </div>
     </div>

@@ -47,7 +47,7 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 35vh;
+    height: 22em; 
     width: 100%;
 }
 
@@ -55,6 +55,7 @@ body {
     background-color: #d62b70;
     color: white;
     position: relative;
+    font-family: 'Frank Ruhl Libre', serif;
 }
 
 .masthead-image {
@@ -170,6 +171,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
+    position: static;
   }
 
  /* Images */
@@ -184,5 +186,11 @@ img {
 @media (max-width: 1300px) {
     .nav-text {
       display: none;
+    }
+}
+  
+@media (max-width: 768px) {
+    .masthead {
+      height: 10em;
     }
 }
