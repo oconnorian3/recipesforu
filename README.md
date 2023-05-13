@@ -1,7 +1,7 @@
 ## Recipes 4 U ##
 <br>
 
-This Django project is a reccipe sharing blog intended for food lovers where users can upload, comment and like other recipes. Users can also view recipes posted by other users which they can try. Like a regular blog only registered users can post, comment on or like other recipies . Registered users will also have the ability to edit or remove their previous posts. 
+This Django project is a recipe sharing blog intended for food lovers where users can upload, comment and like other recipes. Users can also view recipes posted by other users which they can try. Like a regular blog only registered users can post, comment on or like other recipes . Registered users will also have the ability to edit or remove their previous posts. 
 
 ![](images/responsive-screenshot.png)
 
@@ -9,7 +9,7 @@ This Django project is a reccipe sharing blog intended for food lovers where use
 
 ## UI/UX ##
 
-The overall desing is kept simple as users are encouraged to post images to go with their recipes . Research has shown that people eat with their eyes so to speak so distractions were kep to a minium.
+The overall design is kept simple as users are encouraged to post images to go with their recipes . Research has shown that people eat with their eyes so to speak so distractions were kept to a minimum.
 
 The layout of the site is standard for a blog site with clear descriptive navigational links. 
 
@@ -56,7 +56,7 @@ The website caters to the following target groups:
 
 * The website must provide the user with the ability to:
     * Browse through recipes
-    * Register and establish their account
+    * Register an account
     * Create and upload their own recipes
     * Like and comment on recipes
     * Fill out a contact form
@@ -67,11 +67,11 @@ The website caters to the following target groups:
 
 ## Scope ##
 
-This section outlines the functions and features included in the project scope. The project was designed with minimal functionality in mind, which means that most of the features included are basic requirements. For instance, user sign up and login functionality had to be implemented, along with basic CRUD operations for authenticated users. For a detailed explanation of all the existing features, please refer to the Existing Features **Add Link** section. The Future Features section discusses potential features that were deemed unnecessary at this point in time, despite being within the project's possible scope.
+This section outlines the functions and features included in the project scope. The project was designed with minimal functionality in mind, which means that most of the features included are basic requirements. For instance, user sign up and login functionality had to be implemented, along with basic CRUD operations for authenticated users. The Future Features section discusses potential features that were deemed unnecessary at this point in time, despite being within the project's possible scope.
 
 ## Structure ##
 
- The site's layout is based on a simple blog design that is commonly used by many other blogs online. With this structure, users can easily access the site, browse receipes , leave a message and login/register so they can upload their own recipes and comment on other recipes.
+ The site's layout is based on a simple blog design that is commonly used by many other blogs online. With this structure, users can easily access the site, browse recipes , leave a message and login/register so they can upload their own recipes and comment on other recipes.
 
  ## Skeleton ##
 
@@ -85,13 +85,13 @@ This section outlines the functions and features included in the project scope. 
 
 A white background (#FFF) for all pages and posts was chosen throughout the site. A white background allows the images to standout which is the intention here. 
 
-The colour (#d62b70) was used for most (not all) other areas of the site as this colour is the main colour used in the logo and using this colour throughout helps tie the design of the site in together. 
+The colour (#d62b70) was used for most other areas of the site as this colour is the main colour used in the logo and using this colour throughout helps tie the design of the site in together. 
 
 ![](images/colour_displayed_in_readme.png)
 
 **Fonts**
 
-The Google Font *Frank Ruhl Libre* was used for most of the headings and Seri as a backup font.
+The Google Font *Frank Ruhl Libre* was used for most of the headings and Serif as a backup font.
 
 **Images and Logos/Icons**
 
@@ -103,7 +103,7 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 
  * Navigation bar with logo and links
  * Different links visible for authenticated and unauthenticated users
- * Links change from **add colour** to **add colour** when you hover over them
+ * Links change from Grey to pink when you hover over them
  * Responsive menu which collapes into a burger on small to medium screens
  * Brief description on the far right, explaining what the site is about
 
@@ -113,7 +113,7 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 
  * The landing page itself will immediately display the most recent 6 posts.
  * The landing pagge will display both the headers and footer with easibly identifiable links to helo the user navigate throughout the site
- * Pagnation has been implekllented on the site so the user can scrool to the next set of posts using the "next" link
+ * Pagnation has been implemented on the site so the user can scroll to the next set of posts using the "next" link
  * When a user is logged in the home page will display different links as seen in the images below
 
 **Create Post View For Non Logged In Users**
@@ -132,14 +132,14 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
  * Author's name and publish date viewable under title and image
  * Recipe content
  * Number of likes and comments, user can click on the heart to add a like
- * Option to edit/remove a post if the user created that post. When clicking delete the user is prompted with the message *Are you sure you want to delete the following recipe?* which helps prevent users mistakinly deleteing posts.
- * Option to submit a comment and view other comments. Test must be added or else the comment will not submit.
+ * Option to edit/remove a post if the user created that post. When clicking delete the user is prompted with the message *Are you sure you want to delete the following recipe?* which helps prevent users mistakinly deleting posts.
+ * Option to submit a comment and view other comments. Text must be added or else the comment will not submit.
 
 ![](/images/post-view.png)
 
 **Contact US**
 
- * This is a simple form which allows user contact the site admins directly. The form will not submit unless all fields are filled out. THer email field requires a valid email.
+ * This is a simple form which allows the user contact the site admins directly. The form will not submit unless all fields are filled out. The email field requires a valid email.
 
 ![](/images/contact-us.png)
 
@@ -169,12 +169,11 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 
  * Allows a user to create a post
  * Has a title , slug , and a body field. All fields must be filled out for the post to create. The body field allows users to format and style their text and also allows them to add images which will display in the body of the post only
- * User must select the author field and whether they just want a draft of the blog or actually publish it
  * User can submit an image aswell which will display as the main image for the post. If no image is selected a default place holder will be used
 
 ![](/images/create-post-view.png)
 
-**Edit Recpie (For Authenticated Users Only)**
+**Edit Recipe (For Authenticated Users Only)**
 
  * Pre-populates all post content
  * User can update any field and change image
@@ -185,7 +184,7 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 **Delete Recipes (For Authenticated Users Only)**
 
  * Renders seperate page that prompts user to confirm action to delete recipe
- * Refuses access to delete if recipe was bnot posted by the user
+ * Refuses access to delete if recipe was not posted by the user
 
 ![](/images/delete-post.png)
 
@@ -216,8 +215,8 @@ The Post & Content models are based on the Django tutorial walkthrough project b
 
 The project's design process was centered around the CRUD principle, which stands for Create, Read, Update, and Delete.
 
- * Create: An authenticated user can create and save a haiku entry.
- * Read: A user can browse and read their own and other users' haiku entries.
+ * Create: An authenticated user can create and save a post entry.
+ * Read: A user can browse and read their own and other users' post entries.
  * Update: An authenticated user can edit and update their own saved entries.
  * Delete: An authenticated user can delete their own saved entries.
 
@@ -299,7 +298,7 @@ The project's design process was centered around the CRUD principle, which stand
 
   * All Nav bar links redirect you to correct page
   * All footer links redirect you to correct page
-  * All post titles redirect you to the reciepe post
+  * All post titles redirect you to the recipe post
   * The logout and create post links only show for logged in users
   * The register and login links only show for logged out users
   * The contact forms will not send unless all info is entered, will insist on a valid email and admins can view all contact form submissions.
@@ -320,7 +319,7 @@ The project's design process was centered around the CRUD principle, which stand
 
 **Validators**
 
-[HTML Linl](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2F)
+[HTML Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2F)
 
 ![](/images/html-validator.png)
 
@@ -423,3 +422,5 @@ ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
  * Used AI Logo Geneartor Looka to create Logo
  * The masthead and author banner code was taken from the walk through Django project 
  * Code for the custom 403 page was taken from W3Schools
+ * Images taken from [](pexels.com)
+ * Recipes were taken from various food sites
