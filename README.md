@@ -245,7 +245,43 @@ The project's design process was centered around the CRUD principle, which stand
 
  ## Testing ##
 
- **Add content later**
+ ## User Stories ##
+
+  * As a First time user I want to be able to easily identify what the app is for.
+    * Result Passed - Logo , additional Nav text and renedered posts make this clear. 
+
+  * As a User I can view posts so that I can click on one to read
+    * Result Passed - You can view each and its title when visting the site
+
+  * As a User I can click on a post so that I can read the full post
+   * Result Passed - Clicking on any post title allows you read full post
+
+  * As a User / Admin I can view the amount of upvotes/likes so that I can see which posts are most popular
+   *  Result Passed - Users can easily view the amount of likes located under each post   
+
+  * As a User / Admin I can view comments on an individual post so that I can read what's been said
+   * Result Passed - When clicking on a post a user can view all approved comments
+
+  * As a User I can comment on a post so that I can get involved
+   * Result Passed - All logged in users can leave comments which display one approved 
+
+  * As a user I can like any post so that I can share my approval
+   * Result Passed - Logged in users can like posts
+
+  * As a Site Admin I can Approve/Disapprove Comments so that I can filter out objectionable comments
+   * Result Passed - Admins can approve/disapprove comments 
+
+  * As a Site User I can look through a paginated list of recipes so that I can select a recipe that looks good to make. 
+   *  Result Passed - Once a page has reached 6 posts a new page will be created which can be navigated to.  
+
+  * As a Site Admin I can create, read, update and delete post so that I can manage my content
+   * Result Passed -  Registered users are able to create, read , edit and delete all posts
+
+  * As a Site User I can sign In and out my account so that I can protect my account when I am not using it.
+   * Result Passed - The login link allows a user to sign in 
+
+  * As a user I can create an account so that I can manage all my posts
+   * Result Passed - The Register Link allows users create an account so rthey can create a post and also edit and delete it.  
 
  ## Deployment ##
 
