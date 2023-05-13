@@ -27,11 +27,11 @@ Below are some basic Wireframes done up before the project started.
 
 *When a user is NOT logged in*
 
-![](static/images/wireframe_loggedout.png)
+![](images/wireframe_loggedout.png)
 
 *When a user IS logged in*
 
-![](static/images/wireframe_loggedin.png)
+![](images/wireframe_loggedin.png)
 
 ## Development Planes ##
 
@@ -87,7 +87,7 @@ A white background (#FFF) for all pages and posts was chosen throughout the site
 
 The colour (#d62b70) was used for most (not all) other areas of the site as this colour is the main colour used in the logo and using this colour throughout helps tie the design of the site in together. 
 
-![](static/images/colour_displayed_in_readme.png)
+![](images/colour_displayed_in_readme.png)
 
 **Fonts**
 
@@ -198,7 +198,7 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 
 I used Lucid to design the Database models. 
 
-![](static/images/database_models.png)
+![](images/database_models.png)
 
 The Post & Content models are based on the Django tutorial walkthrough project by Code Institute. The project required one custom model (the contact model) . This model was desinged for the contact form. 
 
@@ -301,10 +301,10 @@ The project's design process was centered around the CRUD principle, which stand
   * Only logged in users can comment and the comment submission form only loads for logged in users
   * The home page and all inner pages are responsive for all screen types.
 
-  
 
+**Lighthouse**
 
-
+![](/images/lighthouse.png)
 
 
  ## Deployment ##

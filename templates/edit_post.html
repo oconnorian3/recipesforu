@@ -8,7 +8,7 @@
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p}}
-        <button button class="btn btn-signup right" type="submit">Save</button>
+        <button button class="btn btn-signup right" aria-label="Submit Edit" type="submit">Save</button>
     </form>
     <br>
  </div>
