@@ -15,7 +15,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683108652/pexels-rajesh-tp-1633525_grrm3b.jpg">
+                                    src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683108652/pexels-rajesh-tp-1633525_grrm3b.jpg" alt="placeholder Image">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
