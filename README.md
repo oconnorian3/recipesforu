@@ -247,41 +247,65 @@ The project's design process was centered around the CRUD principle, which stand
 
  ## User Stories ##
 
-  * As a First time user I want to be able to easily identify what the app is for.
-    * Result Passed - Logo , additional Nav text and renedered posts make this clear. 
+  * As a First time user I want to be able to easily identify what the app is for
+    * Result Passed - Logo , additional Nav text and renedered posts make this clear
 
   * As a User I can view posts so that I can click on one to read
     * Result Passed - You can view each and its title when visting the site
 
   * As a User I can click on a post so that I can read the full post
-   * Result Passed - Clicking on any post title allows you read full post
+    * Result Passed - Clicking on any post title allows you read full post
 
   * As a User / Admin I can view the amount of upvotes/likes so that I can see which posts are most popular
-   *  Result Passed - Users can easily view the amount of likes located under each post   
+    *  Result Passed - Users can easily view the amount of likes located under each post   
 
   * As a User / Admin I can view comments on an individual post so that I can read what's been said
-   * Result Passed - When clicking on a post a user can view all approved comments
+    * Result Passed - When clicking on a post a user can view all approved comments
 
   * As a User I can comment on a post so that I can get involved
-   * Result Passed - All logged in users can leave comments which display one approved 
+    * Result Passed - All logged in users can leave comments which display one approved 
 
   * As a user I can like any post so that I can share my approval
-   * Result Passed - Logged in users can like posts
+    * Result Passed - Logged in users can like posts
 
   * As a Site Admin I can Approve/Disapprove Comments so that I can filter out objectionable comments
-   * Result Passed - Admins can approve/disapprove comments 
+    * Result Passed - Admins can approve/disapprove comments 
 
-  * As a Site User I can look through a paginated list of recipes so that I can select a recipe that looks good to make. 
-   *  Result Passed - Once a page has reached 6 posts a new page will be created which can be navigated to.  
+  * As a Site User I can look through a paginated list of recipes so that I can select a recipe that looks good to make.
+    *  Result Passed - Once a page has reached 6 posts a new page will be created which can be navigated to.  
 
   * As a Site Admin I can create, read, update and delete post so that I can manage my content
-   * Result Passed -  Registered users are able to create, read , edit and delete all posts
+    * Result Passed -  Registered users are able to create, read , edit and delete all posts
 
-  * As a Site User I can sign In and out my account so that I can protect my account when I am not using it.
-   * Result Passed - The login link allows a user to sign in 
+  * As a Site User I can sign In and out my account so that I can protect my account when I am not using it
+    * Result Passed - The login link allows a user to sign in 
 
   * As a user I can create an account so that I can manage all my posts
-   * Result Passed - The Register Link allows users create an account so rthey can create a post and also edit and delete it.  
+    * Result Passed - The Register Link allows users create an account so rthey can create a post and also edit and delete it
+
+## Manual Testing ##
+
+  * All Nav bar links redirect you to correct page
+  * All footer links redirect you to correct page
+  * All post titles redirect you to the reciepe post
+  * The logout and create post links only show for logged in users
+  * The register and login links only show for logged out users
+  * The contact forms will not send unless all info is entered, will insist on a valid email and admins can view all contact form submissions.
+  * The edit and delete buttons only show on a post for logged in users and both work. 
+  * Only the post creator can delete and edit their own submissions
+  * Users who try and edit/delete posts they did not create get a custom 403
+  * When users try and delete a post they are prompted with a screen to ensure they want to do it
+  * If a user does not submit an image when creating a post the placeholder image loads as expected
+  * The login and logout buttons work as expected
+  * Creating a new user works when selecting the register link
+  * Only logged in users can comment and the comment submission form only loads for logged in users
+  * The home page and all inner pages are responsive for all screen types.
+
+  
+
+
+
+
 
  ## Deployment ##
 
