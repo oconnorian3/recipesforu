@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
 
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
+        <div class="col-12 mt-3 left row ">
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">
@@ -15,7 +15,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683108652/pexels-rajesh-tp-1633525_grrm3b.jpg" alt="placeholder Image">
+                                    src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683107215/Screenshot_2023-05-03_at_10.05.53_lxmjty.png" alt="placeholder Image">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
