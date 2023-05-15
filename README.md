@@ -320,16 +320,24 @@ The project's design process was centered around the CRUD principle, which stand
 **Validators**
 
 [Home Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2F) **Passed**
+
 [Login](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2Faccounts%2Flogin%2F) **Passed**
+
 [Logout](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2Faccounts%2Flogout%2F) **Passed**
+
 [Register](https://recipesforu.herokuapp.com/accounts/signup/) **Passed**
+
 [Contact US](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2Fcontact%2F) **Passed**
-https://recipesforu.herokuapp.com/beef-bourguignon/ **Passed**
+
 
 [Home Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) **Passed**
+
 [Login](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2Faccounts%2Flogin%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) **Passed**
+
 [Logout](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2Faccounts%2Flogout%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) **Passed**
+
 [Register](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2Faccounts%2Fsignup%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) **Passed**
+
 [Contact Us](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2Fcontact%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) **Passed**
 
 
