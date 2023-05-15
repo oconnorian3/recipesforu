@@ -18,6 +18,10 @@ body {
     background-color: #ffffff;
 }
 
+.footertxt {
+    color: #ffffff !important;
+}
+
 /* Posts Styling */
 .card {
     border: none;
@@ -56,6 +60,15 @@ body {
     color: white;
     position: relative;
     font-family: 'Frank Ruhl Libre', serif;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .masthead-image img {
@@ -165,10 +178,10 @@ body {
 
  /* Images */
 
-img {
-    width: 18.75 !important;
-    height: 18.75em;
-    object-fit: fill;
+ img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
   }
 
  /* Social Links */
