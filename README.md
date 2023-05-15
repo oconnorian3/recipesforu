@@ -319,6 +319,8 @@ The project's design process was centered around the CRUD principle, which stand
 
 **Validators**
 
+**HTML**
+
 [Home Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2F) **Passed**
 
 [Login](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2Faccounts%2Flogin%2F) **Passed**
@@ -329,6 +331,7 @@ The project's design process was centered around the CRUD principle, which stand
 
 [Contact US](https://validator.w3.org/nu/?doc=https%3A%2F%2Frecipesforu.herokuapp.com%2Fcontact%2F) **Passed**
 
+**CSS**
 
 [Home Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) **Passed**
 
