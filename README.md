@@ -343,10 +343,6 @@ The project's design process was centered around the CRUD principle, which stand
 
 [Contact Us](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frecipesforu.herokuapp.com%2Fcontact%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) **Passed**
 
-
-
-![](/images/css-validator.png)
-
 Python files were tested using [this validator](https://pep8ci.herokuapp.com/)
 
     Blog - admin.py - All clear
