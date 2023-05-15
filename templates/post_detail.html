@@ -13,7 +13,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683107215/Screenshot_2023-05-03_at_10.05.53_lxmjty.png" width="100%">
+                <img src="https://res.cloudinary.com/dwhdvlzr7/image/upload/v1683107215/Screenshot_2023-05-03_at_10.05.53_lxmjty.png">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" alt="{{ post.title }}" width="100%">
                 {% endif %}
@@ -95,7 +95,6 @@
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
-                    </p>
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
