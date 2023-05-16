@@ -75,7 +75,7 @@ This section outlines the functions and features included in the project scope. 
 
  ## Skeleton ##
 
- Wireframes were made using Lucid. Plsease click [here](#Wireframe) to view Wireframes. 
+ Wireframes were made using Lucid. Please click [here](#Wireframe) to view Wireframes. 
 
  ## Surface ##
 
@@ -112,27 +112,27 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 **Landing Page**
 
  * The landing page itself will immediately display the most recent 6 posts.
- * The landing pagge will display both the headers and footer with easibly identifiable links to helo the user navigate throughout the site
- * Pagnation has been implemented on the site so the user can scroll to the next set of posts using the "next" link
+ * The landing pagge will display both the headers and footer with easily identifiable links to help the user navigate throughout the site
+ * Pagination has been implemented on the site so the user can scroll to the next set of posts using the "next" link
  * When a user is logged in the home page will display different links as seen in the images below
 
 **Create Post View For Non Logged In Users**
 
- * Recipe title and image viewble at the top of the post view page
+ * Recipe title and image viewable at the top of the post view page
  * Author's name and publish date viewable under title and image
  * Recipe content  
  * Number of likes and comments ( Non logged in users cannot contribute to this)
- * User can view approvded comments
+ * User can view approved comments
 
 ![](/images/create_post.png)
 
 **Post View For Logged In Users**
 
- * Recipe title and image viewble at the top of the post view page
+ * Recipe title and image viewable at the top of the post view page
  * Author's name and publish date viewable under title and image
  * Recipe content
  * Number of likes and comments, user can click on the heart to add a like
- * Option to edit/remove a post if the user created that post. When clicking delete the user is prompted with the message *Are you sure you want to delete the following recipe?* which helps prevent users mistakinly deleting posts.
+ * Option to edit/remove a post if the user created that post. When clicking delete the user is prompted with the message *Are you sure you want to delete the following recipe?* which helps prevent users mistakenly deleting posts.
  * Option to submit a comment and view other comments. Text must be added or else the comment will not submit.
 
 ![](/images/post-view.png)
@@ -147,7 +147,7 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 
  * Allows user to create account
  * Fields include Username, Email (optional), Password and Password confirmation
- * Has an embeeded link which takes the user back to the login page should they need to
+ * Has an embedded link which takes the user back to the login page should they need to
 
 ![](/images/sign-up.png)
 
@@ -155,13 +155,13 @@ The custom logo was used using the Logo Generator Looka. The post imagery will b
 
  * Login form asking for username and password of signed up user
  * Includes "Remember me" checkbox option
- * Has an embeeded link which takes the user back to the register page should they need to
+ * Has an embedded link which takes the user back to the register page should they need to
 
 ![](/images/sign-in.png)
 
 **Logout (For Authenticated Users Only)**
 
- * Seperate page prompts user to confirm action to sign out
+ * Separate page prompts user to confirm action to sign out
 
 ![](/images/sign-out.png)
 
@@ -196,7 +196,7 @@ Features I would have like to add but could not due to various contraints
 
  * Allow users create profiles so they can add extra features such as create drafts
  * Add catergories and a search bar
- * Links which allows users easily share various posts on thier social media
+ * Links which allows users easily share various posts on their social media
 
 
 ## Database Models ##
@@ -209,7 +209,7 @@ I used Lucid to design the Database models.
 
 ![](images/database_models.png)
 
-The Post & Content models are based on the Django tutorial walkthrough project by Code Institute. The project required one custom model (the contact model) . This model was desinged for the contact form. 
+The Post & Content models are based on the Django tutorial walkthrough project by Code Institute. The project required one custom model (the contact model) . This model was designed for the contact form. 
 
 ## CRUD ##
 
@@ -259,10 +259,10 @@ The project's design process was centered around the CRUD principle, which stand
  ## User Stories ##
 
   * As a First time user I want to be able to easily identify what the app is for
-    * Result Passed - Logo , additional Nav text and renedered posts make this clear
+    * Result Passed - Logo , additional Nav text and rendered posts make this clear
 
   * As a User I can view posts so that I can click on one to read
-    * Result Passed - You can view each and its title when visting the site
+    * Result Passed - You can view each and its title when visiting the site
 
   * As a User I can click on a post so that I can read the full post
     * Result Passed - Clicking on any post title allows you read full post
